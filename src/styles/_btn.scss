@@ -1,0 +1,22 @@
+.btn {
+	border: none;
+	background: transparent;
+	font-size: 1rem;
+	cursor: pointer;
+
+	&--outlined {
+		border: 1px solid #f52341;
+		color: #f52341;
+		border-radius: 0.4em;
+		padding: 0.5em 0.7em;
+		font-weight: bold;
+	}
+
+	&--solid {
+		font-weight: 300;
+		background-color: #fff;
+		opacity: 0.5;
+		padding: 0.2em 1em;
+		border-radius: 0.3em;
+	}
+}

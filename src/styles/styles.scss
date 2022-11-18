@@ -1,0 +1,33 @@
+@import "./_variables.scss";
+@import "./_btn.scss";
+@import "./_progressbar.scss";
+@import "./_sugar.scss";
+
+@import "./_header.scss";
+@import "./_main.scss";
+@import "./_footer.scss";
+@import "./_fonts.scss";
+
+@import "./_delivery.scss";
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Museo";
+	font-weight: 500;
+}
+
+body {
+	font-family: "Museo";
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	position: relative;
+	.main {
+		flex-grow: 1;
+		min-height: 30vh;
+	}
+}

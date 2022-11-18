@@ -1,0 +1,25 @@
+.cart {
+	background-color: #f52341;
+
+	display: flex;
+	align-items: center;
+	gap: 0.8em;
+	width: max-content;
+	height: max-content;
+	padding: 0.5em 1.5em;
+	border-radius: 0.3em;
+	color: white;
+	z-index: 100;
+
+	img {
+		width: 20px;
+		height: 20px;
+		color: white;
+	}
+	@media (max-width: $mobile-size) {
+		position: fixed;
+		bottom: 4rem;
+		left: 50%;
+		translate: -50% 0;
+	}
+}

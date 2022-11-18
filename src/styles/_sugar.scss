@@ -1,0 +1,12 @@
+.sugar {
+	a {
+		text-decoration: none;
+		color: gray;
+		span {
+			font-weight: 700;
+		}
+		&.active {
+			color: black;
+		}
+	}
+}

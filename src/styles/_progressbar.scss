@@ -1,0 +1,66 @@
+.progress-bar {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+
+	width: 100vw;
+	background-color: $bg;
+
+	display: flex;
+	color: white;
+	height: 3rem;
+
+	--infoWidth: 30vw;
+	--progressBarWidth: 60vw;
+	--offset: 10vw;
+
+	@media (max-width: $tablet-size) {
+		--infoWidth: 0vw;
+		--progressBarWidth: 100vw;
+		--offset: 0vw;
+	}
+
+	.bar {
+		min-width: 0;
+		position: absolute;
+		background-color: lighten(#f52341, 20);
+		height: 100%;
+		top: 0;
+		left: var(--infoWidth);
+		right: calc(
+			var(--progressBarWidth) * (1 - var(--amount) / 100) + var(--offset)
+		);
+	}
+
+	.info {
+		width: var(--infoWidth);
+		z-index: 2;
+		background-color: #f52341;
+		display: none;
+		@media (min-width: $tablet-size) {
+			display: block;
+		}
+	}
+	.prices {
+		width: var(--progressBarWidth);
+		z-index: 2;
+		position: relative;
+		span {
+			position: absolute;
+			left: calc(var(--amount) / 100 * var(--progressBarWidth));
+			translate: -50% 0;
+
+			&::after {
+				content: "";
+				width: 0.3rem;
+				height: 1.5rem;
+				position: absolute;
+				background-color: #fff;
+				bottom: -2rem;
+				left: 50%;
+				translate: -50% 0;
+			}
+		}
+	}
+}

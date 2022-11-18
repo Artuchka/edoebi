@@ -1,0 +1,30 @@
+@import "./_header-menu-window.scss";
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	gap: 1rem;
+	padding: 0 1rem;
+
+	.logo {
+		width: 100px;
+		height: 100px;
+	}
+
+	img {
+		width: 30px;
+		height: 30px;
+	}
+
+	.input {
+		border: none;
+		background-color: lighten(black, 90);
+		border-radius: 0.3em;
+		padding: 0.5em 1em;
+		font-size: 1rem;
+		font-weight: bold;
+		min-width: 100px;
+	}
+}
