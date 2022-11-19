@@ -7,11 +7,17 @@ import appleImage from "./../img/cards/apple.svg"
 import starImage from "./../img/star.svg"
 import menuImage from "./../img/menu.svg"
 import logoLightImage from "./../img/logo.png"
+import { useState } from "react"
+import { Link } from "react-router-dom"
 
 export const Header = () => {
+	const [openMenu, setOpenMenu] = useState(false)
+
 	return (
 		<header className="header">
-			<img src={logoImage} className="logo" />
+			<Link to="/">
+				<img src={logoImage} className="logo" />
+			</Link>
 			<input
 				type="text"
 				className="input"
@@ -20,12 +26,18 @@ export const Header = () => {
 			<a href="tel:88003333323" className="call">
 				<img src={callImage} className="call" />
 			</a>
-			<img src={menuImage} className="menu" />
+			<img
+				src={menuImage}
+				className="menu"
+				onClick={() => setOpenMenu(true)}
+			/>
 
-			<div className="menu-window">
+			<div className={`menu-window ${openMenu ? "open" : ""}`}>
 				<div className="heading">
 					<img src={logoLightImage} className="logo" />
-					<div className="close">&times;</div>
+					<div className="close" onClick={() => setOpenMenu(false)}>
+						&times;
+					</div>
 				</div>
 
 				<div className="content">
@@ -48,30 +60,49 @@ export const Header = () => {
 					<nav className="nav">
 						<ul className="nav__list">
 							<li>
-								{" "}
-								<a href="#" className="nav__item">
+								<Link
+									to="/login"
+									className="nav__item"
+									onClick={() => setOpenMenu(false)}
+								>
 									Вход и регистрация
-								</a>{" "}
+								</Link>
 							</li>
 							<li>
-								<a href="#" className="nav__item">
+								<Link
+									to="/stocks"
+									className="nav__item"
+									onClick={() => setOpenMenu(false)}
+								>
 									Акции
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a href="#" className="nav__item">
+								<Link
+									to="/franchise"
+									className="nav__item"
+									onClick={() => setOpenMenu(false)}
+								>
 									Франшиза
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a href="#" className="nav__item">
+								<Link
+									to="/investitions"
+									className="nav__item"
+									onClick={() => setOpenMenu(false)}
+								>
 									Инвестиции
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a href="#" className="nav__item">
+								<Link
+									to="/documents"
+									className="nav__item"
+									onClick={() => setOpenMenu(false)}
+								>
 									Правовые документы
-								</a>
+								</Link>
 							</li>
 						</ul>
 					</nav>

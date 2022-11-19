@@ -61,7 +61,10 @@
 			flex-direction: column;
 			list-style: none;
 			gap: 1rem;
-			color: white;
+			a {
+				color: white;
+				text-decoration: none;
+			}
 
 			@media (min-width: $mobile-size) {
 				flex-direction: row;

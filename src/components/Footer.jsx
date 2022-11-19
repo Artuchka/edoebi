@@ -6,6 +6,7 @@ import mastercardImage from "./../img/cards/mastercard.svg"
 import visaImage from "./../img/cards/visa.svg"
 import mirImage from "./../img/cards/mir.svg"
 import vkImage from "./../img/vk.svg"
+import { Link } from "react-router-dom"
 
 export const Footer = () => {
 	return (
@@ -14,14 +15,28 @@ export const Footer = () => {
 				<div className="nav-form-contacts">
 					<nav className="nav">
 						<ul className="nav__commerce nav__list">
-							<li className="nav__item">О компании</li>
-							<li className="nav__item">Доставка</li>
-							<li className="nav__item">Акции</li>
-							<li className="nav__item">Франшиза</li>
+							<Link to="/about">
+								<li className="nav__item">О компании</li>
+							</Link>
+							<Link to="/delivery">
+								<li className="nav__item">Доставка</li>
+							</Link>
+							<Link to="/stocks">
+								<li className="nav__item">Акции</li>
+							</Link>
+							<Link to="/franchise">
+								<li className="nav__item">Франшиза</li>
+							</Link>
 						</ul>
 						<ul className="nav__documents nav__list">
-							<li className="nav__item">Инвестиции</li>
-							<li className="nav__item">Правовые документы</li>
+							<Link to="/invest">
+								<li className="nav__item">Инвестиции</li>
+							</Link>
+							<Link to="/documents">
+								<li className="nav__item">
+									Правовые документы
+								</li>
+							</Link>
 						</ul>
 					</nav>
 					<form className="subscribe-form">

@@ -4,12 +4,12 @@
 	max-width: 100vw;
 	min-height: 100vh;
 	background-color: $bg;
-	z-index: 2;
+	z-index: 10;
 	color: white;
 
 	translate: 0 -100%;
 	opacity: 0;
-	transition: all 2s ease-in-out;
+	transition: all 0.5s ease-in-out;
 
 	&.open {
 		translate: 0 0;

@@ -3,16 +3,6 @@ import React from "react"
 export const Stocks = () => {
 	return (
 		<>
-			<div className="sugar">
-				<a href="/" className="inactive">
-					<span>Главная</span>
-				</a>
-				/
-				<a href="/delivery" className="active">
-					<span>Акции</span>
-				</a>
-			</div>
-
 			<div className="content">
 				<h2 className="content__title">Акции</h2>
 				<div className="content__main">
