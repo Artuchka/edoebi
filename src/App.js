@@ -1,21 +1,21 @@
-import { Home } from "./components/Home.jsx"
-import { Header } from "./components/Header.jsx"
-import { Sticky } from "./components/Sticky.jsx"
-import { Slider } from "./components/Slider.jsx"
-import { Footer } from "./components/Footer.jsx"
+import { MainLayout } from "./layouts/MainLayout.jsx"
 import "./styles/styles.scss"
-import { BrowserRouter, Route, Router, Routes } from "react-router-dom"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { Home } from "./pages/Home.jsx"
+import { NotFoundPage } from "./pages/NotFoundPage.jsx"
+import { Stocks } from "./pages/Stocks.jsx"
 
 function App() {
 	return (
-		<div>
-			<Header />
-			<main className="main">
-				<Sticky />
-				<Slider />
-			</main>
-			<Footer />
-		</div>
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={<MainLayout />}>
+					<Route index element={<Home />} />
+					<Route path="/stocks" element={<Stocks />} />
+					<Route path="*" element={<NotFoundPage />} />
+				</Route>
+			</Routes>
+		</BrowserRouter>
 	)
 }
 

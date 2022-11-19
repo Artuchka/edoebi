@@ -1,5 +1,12 @@
 import React from "react"
 
+import androidImage from "./../img/cards/andriod.svg"
+import appleImage from "./../img/cards/apple.svg"
+import mastercardImage from "./../img/cards/mastercard.svg"
+import visaImage from "./../img/cards/visa.svg"
+import mirImage from "./../img/cards/mir.svg"
+import vkImage from "./../img/vk.svg"
+
 export const Footer = () => {
 	return (
 		<footer className="footer">
@@ -67,15 +74,14 @@ export const Footer = () => {
 					<div className="apps-stats">
 						<div className="apps">
 							<div className="playstore">
-								<img src="./img/cards/andriod.svg" />
+								<img src={androidImage} />
 							</div>
 							<div className="appstore">
-								<img src="./img/cards/apple.svg" />
+								<img src={appleImage} />
 							</div>
 						</div>
 						<div className="stats">
 							<small>
-								{" "}
 								Выручка российской сети в этом месяце
 								106,967,735 ₽.
 							</small>
@@ -85,26 +91,14 @@ export const Footer = () => {
 					<div className="cards">
 						<small className="cards__title">Мы работаем с: </small>
 						<div className="cards__list">
+							<img src={mirImage} className="cards__item" />
+							<img src={visaImage} className="cards__item" />
 							<img
-								src="./img/cards/mir.svg"
+								src={mastercardImage}
 								className="cards__item"
 							/>
-							<img
-								src="./img/cards/visa.svg"
-								className="cards__item"
-							/>
-							<img
-								src="./img/cards/mastercard.svg"
-								className="cards__item"
-							/>
-							<img
-								src="./img/cards/apple.svg"
-								className="cards__item"
-							/>
-							<img
-								src="./img/cards/andriod.svg"
-								className="cards__item"
-							/>
+							<img src={appleImage} className="cards__item" />
+							<img src={androidImage} className="cards__item" />
 						</div>
 					</div>
 				</div>
@@ -112,7 +106,7 @@ export const Footer = () => {
 			<div className="copyright">
 				<div className="copyright__inner">
 					<div className="company">© 2022, ЁбиДоёби</div>
-					<img src="./img/vk.svg" />
+					<img src={vkImage} />
 				</div>
 			</div>
 		</footer>

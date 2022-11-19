@@ -1,11 +1,10 @@
 import React from "react"
-import { Category } from "./Category.jsx"
-import { ProgressBar } from "./ProgressBar.jsx"
+import { Category } from "../components/Category.jsx"
+import { ProgressBar } from "../components/ProgressBar.jsx"
 
 export const Home = () => {
 	return (
 		<>
-			fasdfsdf
 			<ProgressBar />
 			<Category />
 		</>

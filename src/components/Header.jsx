@@ -1,28 +1,36 @@
 import React from "react"
 
+import logoImage from "./../img/logo.png"
+import callImage from "./../img/call.svg"
+import androidImage from "./../img/cards/andriod.svg"
+import appleImage from "./../img/cards/apple.svg"
+import starImage from "./../img/star.svg"
+import menuImage from "./../img/menu.svg"
+import logoLightImage from "./../img/logo.png"
+
 export const Header = () => {
 	return (
 		<header className="header">
-			<img src="./../img/logo.png" className="logo" />
+			<img src={logoImage} className="logo" />
 			<input
 				type="text"
 				className="input"
 				placeholder="Ввести промокод"
 			/>
 			<a href="tel:88003333323" className="call">
-				<img src="./../img/call.svg" className="call" />
+				<img src={callImage} className="call" />
 			</a>
-			<img src="./../img/menu.svg" className="menu" />
+			<img src={menuImage} className="menu" />
 
 			<div className="menu-window">
 				<div className="heading">
-					<img src="./../img/logo-light.png" className="logo" />
+					<img src={logoLightImage} className="logo" />
 					<div className="close">&times;</div>
 				</div>
 
 				<div className="content">
 					<div className="location">
-						<img src="./../img/star.svg" className="location" />
+						<img src={starImage} className="location" />
 						<div className="info">
 							<div className="city">Абакан</div>
 							<small>Изменить</small>
@@ -31,9 +39,9 @@ export const Header = () => {
 					<div className="nearest-stats">
 						<div className="time">0 мин</div>
 						<div className="stars">
-							<img src="./../img/star.svg" />
-							<img src="./../img/star.svg" />
-							<img src="./../img/star.svg" />
+							<img src={starImage} />
+							<img src={starImage} />
+							<img src={starImage} />
 						</div>
 					</div>
 
@@ -70,10 +78,10 @@ export const Header = () => {
 
 					<div className="apps">
 						<div className="playstore">
-							<img src="./../img/cards/andriod.svg" />
+							<img src={androidImage} />
 						</div>
 						<div className="appstore">
-							<img src="./../img/cards/apple.svg" />
+							<img src={appleImage} />
 						</div>
 					</div>
 				</div>

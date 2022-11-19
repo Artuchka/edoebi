@@ -1,5 +1,7 @@
 import React from "react"
 
+import cartImage from "./../img/cart.svg"
+
 export const Sticky = () => {
 	return (
 		<div className="sticky">
@@ -18,7 +20,7 @@ export const Sticky = () => {
 				</ul>
 			</div>
 			<div className="cart">
-				<img src="./img/cart.svg" />
+				<img src={cartImage} />
 				Cart
 				<span className="total-price">0</span>
 			</div>
