@@ -2,7 +2,6 @@ import axios from "axios"
 import React from "react"
 import { useState } from "react"
 import { Category } from "../components/Category.jsx"
-import { Item } from "../components/Item.jsx"
 import { ProgressBar } from "../components/ProgressBar.jsx"
 
 const categorySample = {
