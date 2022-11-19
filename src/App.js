@@ -10,13 +10,30 @@ import { Stocks } from "./pages/Stocks.jsx"
 import { DeliveryMap } from "./pages/DeliveryMap.jsx"
 import { Documents } from "./pages/Documents.jsx"
 import { About } from "./pages/About.jsx"
+import React, { useState } from "react"
 
 function App() {
+	const [cart, setCart] = useState({})
+
+	const [totalPrice, setTotalPrice] = useState(0)
+
+	React.useEffect(() => {
+		const counted = Object.values(cart).reduce((prev, curr) => {
+			return prev + curr.count * curr.price
+		}, 0)
+		setTotalPrice(counted)
+	}, [cart])
 	return (
 		<BrowserRouter>
 			<Routes>
-				<Route path="/" element={<MainLayout />}>
-					<Route index element={<Home />} />
+				<Route
+					path="/"
+					element={<MainLayout totalPrice={totalPrice} />}
+				>
+					<Route
+						index
+						element={<Home cart={cart} setCart={setCart} />}
+					/>
 					<Route path="/stocks" element={<Stocks />} />
 					<Route path="/delivery" element={<DeliveryMap />} />
 					<Route path="/documents" element={<Documents />} />

@@ -9,15 +9,14 @@ const sampleItem = {
 	starred: true,
 }
 
-export const Category = ({ title }) => {
+export const Category = ({ title, items, addToCart }) => {
 	return (
 		<section className="category">
 			<h3 className="category__title">{title}</h3>
 			<div className="category__items-grid">
-				<Item {...sampleItem} />
-				<Item {...sampleItem} />
-				<Item {...sampleItem} />
-				<Item {...sampleItem} />
+				{items.map((d) => {
+					return <Item {...d} key={d.uuid} addToCart={addToCart} />
+				})}
 			</div>
 		</section>
 	)

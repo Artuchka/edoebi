@@ -2,27 +2,36 @@ import React from "react"
 
 import cartImage from "./../img/cart.svg"
 
-export const Sticky = () => {
+const categories = [
+	"Рекомендуем",
+	"Премиум",
+	"Роллы и суши",
+	"Темпура",
+	"Запечённые",
+	"Горячее и салаты",
+	"Соусы",
+	"Напитки и десерты",
+	"Специи",
+]
+
+export const Sticky = ({ totalPrice }) => {
 	return (
 		<div className="sticky">
 			<div className="category-list-wrapper">
 				<ul className="category-list">
-					<li className="category-list__item special">Рекомендуем</li>
-					<li className="category-list__item">Наборы</li>
-					<li className="category-list__item">Премиум</li>
-					<li className="category-list__item">Роллы и суши</li>
-					<li className="category-list__item">Темпура</li>
-					<li className="category-list__item">Запечённые</li>
-					<li className="category-list__item">Горячее и салаты</li>
-					<li className="category-list__item">Соусы</li>
-					<li className="category-list__item">Напитки и десерты</li>
-					<li className="category-list__item">Специи</li>
+					{categories.map((catName, ind) => {
+						return (
+							<li className="category-list__item" key={ind}>
+								{catName}
+							</li>
+						)
+					})}
 				</ul>
 			</div>
 			<div className="cart">
 				<img src={cartImage} />
 				Cart
-				<span className="total-price">0</span>
+				<span className="total-price">{totalPrice}</span>
 			</div>
 		</div>
 	)

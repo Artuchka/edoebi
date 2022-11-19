@@ -8,7 +8,7 @@ import { Sugar } from "./../components/Sugar.jsx"
 import { Outlet, useLocation } from "react-router-dom"
 import { useLayoutEffect } from "react"
 
-export const MainLayout = () => {
+export const MainLayout = ({ totalPrice }) => {
 	const location = useLocation()
 	useLayoutEffect(() => {
 		document.documentElement.scrollTo(0, 0)
@@ -18,7 +18,7 @@ export const MainLayout = () => {
 		<>
 			<Header />
 			<main className="main">
-				<Sticky />
+				<Sticky totalPrice={totalPrice} />
 				<SliderComp />
 				<Sugar />
 				<Outlet />
