@@ -1,4 +1,5 @@
 import React from "react"
+import { useState } from "react"
 
 import cartImage from "./../img/cart.svg"
 
@@ -14,7 +15,8 @@ const categories = [
 	"Специи",
 ]
 
-export const Sticky = ({ totalPrice }) => {
+export const Sticky = ({ totalPrice, cartItems }) => {
+	const [openCart, setOpenCart] = useState(true)
 	return (
 		<div className="sticky">
 			<div className="category-list-wrapper">
@@ -28,11 +30,21 @@ export const Sticky = ({ totalPrice }) => {
 					})}
 				</ul>
 			</div>
-			<div className="cart">
+			<div className="cart" onClick={() => setOpenCart(true)}>
 				<img src={cartImage} />
 				Cart
 				<span className="total-price">{totalPrice}</span>
 			</div>
+			{openCart && (
+				<div className="cart-window">
+					{Object.values(cartItems).map((item) => {
+						return <h1>{item.name}</h1>
+					})}
+					<div className="close" onClick={() => setOpenCart(false)}>
+						&times;
+					</div>
+				</div>
+			)}
 		</div>
 	)
 }

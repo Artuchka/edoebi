@@ -28,7 +28,9 @@ function App() {
 			<Routes>
 				<Route
 					path="/"
-					element={<MainLayout totalPrice={totalPrice} />}
+					element={
+						<MainLayout totalPrice={totalPrice} cartItems={cart} />
+					}
 				>
 					<Route
 						index

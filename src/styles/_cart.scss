@@ -22,4 +22,19 @@
 		left: 50%;
 		translate: -50% 0;
 	}
+
+	&-window {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		translate: -50% -50%;
+		border: 2px solid orange;
+		background-color: #fff;
+		border-radius: 0.5em;
+		padding: 2rem;
+
+		.close {
+			font-size: 3rem;
+		}
+	}
 }
