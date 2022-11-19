@@ -34,7 +34,9 @@ export const Header = () => {
 
 			<div className={`menu-window ${openMenu ? "open" : ""}`}>
 				<div className="heading">
-					<img src={logoLightImage} className="logo" />
+					<Link to="/">
+						<img src={logoLightImage} className="logo" />
+					</Link>
 					<div className="close" onClick={() => setOpenMenu(false)}>
 						&times;
 					</div>

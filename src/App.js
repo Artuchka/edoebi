@@ -9,6 +9,7 @@ import { NotFoundPage } from "./pages/NotFoundPage.jsx"
 import { Stocks } from "./pages/Stocks.jsx"
 import { DeliveryMap } from "./pages/DeliveryMap.jsx"
 import { Documents } from "./pages/Documents.jsx"
+import { About } from "./pages/About.jsx"
 
 function App() {
 	return (
@@ -19,6 +20,7 @@ function App() {
 					<Route path="/stocks" element={<Stocks />} />
 					<Route path="/delivery" element={<DeliveryMap />} />
 					<Route path="/documents" element={<Documents />} />
+					<Route path="/about" element={<About />} />
 					<Route path="*" element={<NotFoundPage />} />
 				</Route>
 			</Routes>
